@@ -1,0 +1,200 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import profilePic from './profilePic.jpg'
+import ytshuffle from './ytshuffle.png'
+import cnotify from './cnotify.jpg'
+import userInfo from './userInfo.png'
+
+
+
+class Nav extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return(
+      <div className='nav-wrapper'>
+        <nav className='nav-fixed'>
+
+          <div className='email-address'>
+            Johnson22@gmail.com
+          </div>
+
+          <a className='brand'>
+            <div>
+              Jim Johnson
+            </div>
+          </a>
+
+          <ul className='contact-links'>
+            <li>
+              <a href='mailto:Johnson22@gmail.com' className='email'>
+                <i className='fa fa-envelope-square'></i>
+              </a>
+              Johnson22@gmail.com
+            </li>
+            <li>
+              <a href='https://github.com' target='_blank' rel='noopener noreferrer' className='github'>
+                <i className='fa fa-github'></i>
+                GitHub
+              </a>
+            </li>  
+          </ul>
+
+        </nav>
+      </div>
+    )
+  }
+}
+
+class Profile extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return(
+      <div className='profile'>
+
+        <img src={profilePic} alt='profile pic' />
+
+        <div className='profile-name'>
+          Jim Johnson
+        </div>
+
+        <div className='profile-location'>
+          <span>aspiring web developer</span> based in NYC
+        </div>
+
+        <ul className='profile-links'>
+          <li>
+            <a href='mailto:Johnson22@gmail.com' className='email'>
+              <i className='fa fa-envelope-square'></i>
+              Email
+            </a>
+          </li>
+          <li>
+            <a href='https://github.com' target='_blank' rel='noopener noreferrer' className='github'>
+              <i className='fa fa-github'></i>
+              GitHub
+            </a>
+          </li>  
+          <li>
+            <a href='https://www.linkedin.com/' target='_blank' rel='noopener noreferrer' className='linkedin'>
+              <i className='fa fa-linkedin-square'></i>
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    )
+  }
+}
+
+class Project extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return(
+      <div className='project'>
+
+        <a href={this.props.heroku} target='_blank' rel='noopener noreferrer' className='live'>
+          <img src={this.props.image} alt='project screenshot' />
+          <div className='live-overlay'>
+            <div>
+              View Site
+            </div>
+          </div>
+        </a>
+
+        <div className='project-links'>
+          <a href={this.props.heroku} target='_blank' rel='noopener noreferrer' className='view'>
+            view
+          </a>
+          <a href={this.props.repo}target='_blank' rel='noopener noreferrer' className='github'>
+            <i className='fa fa-github'></i>
+            repo
+          </a>
+        </div>
+
+        <div className='project-title'>
+          {this.props.title}
+        </div>
+                
+        <div className='project-info'>
+          {this.props.description}
+        </div>
+
+      </div>
+    )
+  }
+}
+
+
+class ProjectContainer extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return(
+      <div className='projects'>
+
+        <div className='title'>
+          Projects
+        </div>
+
+        <div className='projects-display'>
+          <Project heroku='https://herokuapp.com'
+                   repo='https://github.com'
+                   image={ytshuffle}
+                   title='ytshuffle'
+                   description='Built primarily using Rails, this project aims to shuffle and play a playlist from Youtube'
+          />
+          <Project heroku='https://herokuapp.com'
+                   repo='https://github.com'
+                   image={cnotify}
+                   title='cnotify'
+                   description='Made using Rails and JavaScript, this project aims to help find events personalized to my tastes'
+          />
+          <Project heroku='https://herokuapp.com'
+                   repo='https://github.com'
+                   image={userInfo}
+                   title='your-info'
+                   description='This project aims to experiment with React and to display info that can be obtained from a user simply visiting a website'
+          />
+        </div>
+
+      </div>
+    )
+  }
+}
+
+
+class Portfolio extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return(
+      <div className='page-wrap'>
+        <Nav />
+        <div className='content'>
+          <Profile />
+          <ProjectContainer />
+        </div>
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(
+  <Portfolio />,
+  document.getElementById('root')
+)
