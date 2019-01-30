@@ -154,13 +154,13 @@ class ProjectContainer extends React.Component {
                    repo='https://github.com'
                    image={ytshuffle}
                    title='ytshuffle'
-                   description='Built primarily using Rails, this project aims to shuffle and play a playlist from Youtube'
+                   description='Built primarily using Rails, this project shuffles and plays Youtube playlists'
           />
           <Project heroku='https://herokuapp.com'
                    repo='https://github.com'
                    image={cnotify}
                    title='cnotify'
-                   description='Made using Rails and JavaScript, this project aims to help find events personalized to my tastes'
+                   description='Made using Rails and JavaScript, this project helps find events personalized to my tastes'
           />
           <Project heroku='https://herokuapp.com'
                    repo='https://github.com'
