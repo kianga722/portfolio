@@ -22,7 +22,7 @@ class Nav extends React.Component {
             Johnson22@gmail.com
           </div>
 
-          <a className='brand'>
+          <a href='https://toptester1.github.io' className='brand'>
             <div>
               Jim Johnson
             </div>
