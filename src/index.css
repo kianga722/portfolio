@@ -166,6 +166,10 @@ Profile
   border-radius: 50%;
 }
 
+.profile > img:hover + .profile-name > .highlight {
+  text-shadow: 0 0 3px #ffcfcf;
+}
+
 .profile-name {
   display: block;
   margin-bottom: 6px;
