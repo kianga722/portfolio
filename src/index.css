@@ -156,6 +156,7 @@ Profile
 
 .profile,
 .projects {
+  display: block;
   text-align: center;
 }
 
@@ -166,7 +167,12 @@ Profile
 }
 
 .profile-name {
+  display: block;
   margin-bottom: 6px;
+}
+
+.profile-name > div {
+  display: inline-block;
 }
 
 .profile-name,
@@ -322,6 +328,14 @@ Projects
 .project-info {
   text-align: left;
   line-height: 1.3rem;
+}
+
+/*
+Underline Hover
+*/
+
+.underline:hover {
+  text-shadow: 0 0 3px yellow;
 }
 
 

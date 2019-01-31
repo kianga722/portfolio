@@ -18,7 +18,7 @@ class Nav extends React.Component {
       <div className='nav-wrapper'>
         <nav className='nav-fixed'>
 
-          <div className='email-address'>
+          <div className='email-address underline'>
             Johnson22@gmail.com
           </div>
 
@@ -33,7 +33,7 @@ class Nav extends React.Component {
               <a href='mailto:Johnson22@gmail.com' className='email'>
                 <i className='fa fa-envelope-square'></i>
               </a>
-              Johnson22@gmail.com
+              <span className='underline'>Johnson22@gmail.com</span>
             </li>
             <li>
               <a href='https://github.com' target='_blank' rel='noopener noreferrer' className='github'>
@@ -61,7 +61,9 @@ class Profile extends React.Component {
         <img src={profilePic} alt='profile pic' />
 
         <div className='profile-name'>
-          Jim Johnson
+          <div className='underline'>
+            Jim Johnson
+          </div>
         </div>
 
         <div className='profile-location'>
@@ -122,7 +124,7 @@ class Project extends React.Component {
           </a>
         </div>
 
-        <div className='project-title'>
+        <div className='project-title underline'>
           {this.props.title}
         </div>
                 
@@ -179,6 +181,28 @@ class ProjectContainer extends React.Component {
 class Portfolio extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      secretCode: [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+      pressed: []
+    }
+    this.handleKeyUp = this.handleKeyUp.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('keyup', this.handleKeyUp)
+  }
+
+  handleKeyUp(e) {
+    let pressedNew = this.state.pressed.concat(e.keyCode);
+    pressedNew.splice(0, pressedNew.length - this.state.secretCode.length);
+
+    this.setState({
+      pressed: pressedNew
+    })
+
+    if (this.state.pressed.join() == this.state.secretCode.join()) {
+      alert('Contact me at Johnson22@gmail.com')
+    }
   }
 
   render() {
