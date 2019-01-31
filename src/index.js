@@ -18,7 +18,7 @@ class Nav extends React.Component {
       <div className='nav-wrapper'>
         <nav className='nav-fixed'>
 
-          <div className='email-address underline'>
+          <div className='email-address highlight'>
             Johnson22@gmail.com
           </div>
 
@@ -33,7 +33,7 @@ class Nav extends React.Component {
               <a href='mailto:Johnson22@gmail.com' className='email'>
                 <i className='fa fa-envelope-square'></i>
               </a>
-              <span className='underline'>Johnson22@gmail.com</span>
+              <span className='highlight'>Johnson22@gmail.com</span>
             </li>
             <li>
               <a href='https://github.com' target='_blank' rel='noopener noreferrer' className='github'>
@@ -61,7 +61,7 @@ class Profile extends React.Component {
         <img src={profilePic} alt='profile pic' />
 
         <div className='profile-name'>
-          <div className='underline'>
+          <div className='highlight'>
             Jim Johnson
           </div>
         </div>
@@ -108,7 +108,9 @@ class Project extends React.Component {
         <a href={this.props.heroku} target='_blank' rel='noopener noreferrer' className='live'>
           <img src={this.props.image} alt='project screenshot' />
           <div className='live-overlay'>
-            <div>
+          </div>
+          <div className='view-wrapper'>
+            <div className='viewSite'>
               View Site
             </div>
           </div>
@@ -124,7 +126,7 @@ class Project extends React.Component {
           </a>
         </div>
 
-        <div className='project-title underline'>
+        <div className='project-title highlight'>
           {this.props.title}
         </div>
                 
@@ -182,6 +184,7 @@ class Portfolio extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      //KONAMI code
       secretCode: [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
       pressed: []
     }
@@ -200,7 +203,7 @@ class Portfolio extends React.Component {
       pressed: pressedNew
     })
 
-    if (this.state.pressed.join() == this.state.secretCode.join()) {
+    if (this.state.pressed.join() === this.state.secretCode.join()) {
       alert('Contact me at Johnson22@gmail.com')
     }
   }
