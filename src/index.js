@@ -19,21 +19,21 @@ class Nav extends React.Component {
         <nav className='nav-fixed'>
 
           <div className='email-address highlight'>
-            Johnson22@gmail.com
+            kianga722@gmail.com
           </div>
 
           <a href='https://toptester1.github.io' className='brand'>
             <div>
-              Jim Johnson
+              Andrew Kiang
             </div>
           </a>
 
           <ul className='contact-links'>
             <li>
-              <a href='mailto:Johnson22@gmail.com' className='email'>
+              <a href='mailto:kianga722@gmail.com' className='email'>
                 <i className='fa fa-envelope-square'></i>
               </a>
-              <span className='highlight'>Johnson22@gmail.com</span>
+              <span className='highlight'>kianga722@gmail.com</span>
             </li>
             <li>
               <a href='https://github.com' target='_blank' rel='noopener noreferrer' className='github'>
@@ -62,17 +62,17 @@ class Profile extends React.Component {
 
         <div className='profile-name'>
           <div className='highlight'>
-            Jim Johnson
+            Andrew Kiang
           </div>
         </div>
 
         <div className='profile-location'>
-          <span>aspiring web developer</span> based in NYC
+          <span>web developer</span> based in NYC
         </div>
 
         <ul className='profile-links'>
           <li>
-            <a href='mailto:Johnson22@gmail.com' className='email'>
+            <a href='mailto:kianga722@gmail.com' className='email'>
               <i className='fa fa-envelope-square'></i>
               Email
             </a>
@@ -204,7 +204,7 @@ class Portfolio extends React.Component {
     })
 
     if (this.state.pressed.join() === this.state.secretCode.join()) {
-      alert('Contact me at Johnson22@gmail.com')
+      alert('Contact me at kianga722@gmail.com')
     }
   }
 
