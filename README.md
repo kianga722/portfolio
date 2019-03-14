@@ -1,9 +1,9 @@
 # portfolio
 This project aims to create a portfolio website
 
-[View App](https://toptester1.github.io)
+[View App](https://kianga722.github.io)
 
-![screenshot](https://github.com/toptester1/portfolio/blob/master/public/images/screenshot.png)
+![screenshot](https://github.com/kianga722/portfolio/blob/master/public/images/screenshot.png)
 
 ## Summary
 

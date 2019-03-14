@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import profilePic from './profilePic.jpg'
+import profilePic from './profPic.png'
 import ytshuffle from './ytshuffle.png'
 import cnotify from './cnotify.jpg'
 import userInfo from './userInfo.png'
@@ -22,7 +22,7 @@ class Nav extends React.Component {
             kianga722@gmail.com
           </div>
 
-          <a href='https://toptester1.github.io' className='brand'>
+          <a href='https://kianga722.github.io' className='brand'>
             <div>
               Andrew Kiang
             </div>
@@ -36,7 +36,7 @@ class Nav extends React.Component {
               <span className='highlight'>kianga722@gmail.com</span>
             </li>
             <li>
-              <a href='https://github.com' target='_blank' rel='noopener noreferrer' className='github'>
+              <a href='https://github.com/kianga722' target='_blank' rel='noopener noreferrer' className='github'>
                 <i className='fa fa-github'></i>
                 GitHub
               </a>
@@ -78,13 +78,13 @@ class Profile extends React.Component {
             </a>
           </li>
           <li>
-            <a href='https://github.com' target='_blank' rel='noopener noreferrer' className='github'>
+            <a href='https://github.com/kianga722' target='_blank' rel='noopener noreferrer' className='github'>
               <i className='fa fa-github'></i>
               GitHub
             </a>
           </li>  
           <li>
-            <a href='https://www.linkedin.com/' target='_blank' rel='noopener noreferrer' className='linkedin'>
+            <a href='https://www.linkedin.com/in/kianga' target='_blank' rel='noopener noreferrer' className='linkedin'>
               <i className='fa fa-linkedin-square'></i>
               LinkedIn
             </a>
@@ -154,20 +154,20 @@ class ProjectContainer extends React.Component {
         </div>
 
         <div className='projects-display'>
-          <Project heroku='https://herokuapp.com'
-                   repo='https://github.com'
+          <Project heroku='https://ytshuffle.herokuapp.com/'
+                   repo='https://github.com/kianga722/ytshuffle'
                    image={ytshuffle}
                    title='ytshuffle'
                    description='Built primarily using Rails, this project shuffles and plays Youtube playlists'
           />
-          <Project heroku='https://herokuapp.com'
-                   repo='https://github.com'
+          <Project heroku='https://cnotify.herokuapp.com/'
+                   repo='https://github.com/kianga722/cnotify'
                    image={cnotify}
                    title='cnotify'
                    description='Made using Rails and JavaScript, this project helps find events personalized to my tastes'
           />
-          <Project heroku='https://herokuapp.com'
-                   repo='https://github.com'
+          <Project heroku='https://kianga722.github.io/yourinfo/'
+                   repo='https://github.com/kianga722/yourinfo'
                    image={userInfo}
                    title='your-info'
                    description='This project aims to experiment with React and to display info that can be obtained from a user simply visiting a website'
