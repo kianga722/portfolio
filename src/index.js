@@ -169,7 +169,7 @@ class ProjectContainer extends React.Component {
           <Project heroku='https://kianga722.github.io/yourinfo/'
                    repo='https://github.com/kianga722/yourinfo'
                    image={userInfo}
-                   title='your-info'
+                   title='yourinfo'
                    description='This project aims to experiment with React and to display info that can be obtained from a user simply visiting a website'
           />
         </div>
