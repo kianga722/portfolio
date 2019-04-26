@@ -1,184 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import profilePic from './profPic.png'
-import ytshuffle from './ytshuffle.png'
-import cnotify from './cnotify.jpg'
-import userInfo from './userInfo.png'
-
-
-
-class Nav extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return(
-      <div className='nav-wrapper'>
-        <nav className='nav-fixed'>
-
-          <div className='email-address highlight'>
-            kianga722@gmail.com
-          </div>
-
-          <a href='https://kianga722.github.io' className='brand'>
-            <div>
-              Andrew Kiang
-            </div>
-          </a>
-
-          <ul className='contact-links'>
-            <li>
-              <a href='mailto:kianga722@gmail.com' className='email'>
-                <i className='fa fa-envelope-square'></i>
-              </a>
-              <span className='highlight'>kianga722@gmail.com</span>
-            </li>
-            <li>
-              <a href='https://github.com/kianga722' target='_blank' rel='noopener noreferrer' className='github'>
-                <i className='fa fa-github'></i>
-                GitHub
-              </a>
-            </li>  
-          </ul>
-
-        </nav>
-      </div>
-    )
-  }
-}
-
-class Profile extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return(
-      <div className='profile'>
-
-        <img src={profilePic} alt='profile pic' />
-
-        <div className='profile-name'>
-          <div className='highlight'>
-            Andrew Kiang
-          </div>
-        </div>
-
-        <div className='profile-location'>
-          <span>web developer</span> based in NYC
-        </div>
-
-        <ul className='profile-links'>
-          <li>
-            <a href='mailto:kianga722@gmail.com' className='email'>
-              <i className='fa fa-envelope-square'></i>
-              Email
-            </a>
-          </li>
-          <li>
-            <a href='https://github.com/kianga722' target='_blank' rel='noopener noreferrer' className='github'>
-              <i className='fa fa-github'></i>
-              GitHub
-            </a>
-          </li>  
-          <li>
-            <a href='https://www.linkedin.com/in/kianga' target='_blank' rel='noopener noreferrer' className='linkedin'>
-              <i className='fa fa-linkedin-square'></i>
-              LinkedIn
-            </a>
-          </li>
-        </ul>
-
-      </div>
-    )
-  }
-}
-
-class Project extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return(
-      <div className='project'>
-
-        <a href={this.props.heroku} target='_blank' rel='noopener noreferrer' className='live'>
-          <img src={this.props.image} alt='project screenshot' />
-          <div className='live-overlay'>
-          </div>
-          <div className='view-wrapper'>
-            <div className='viewSite'>
-              View Site
-            </div>
-          </div>
-        </a>
-
-        <div className='project-links'>
-          <a href={this.props.heroku} target='_blank' rel='noopener noreferrer' className='view'>
-            view
-          </a>
-          <a href={this.props.repo}target='_blank' rel='noopener noreferrer' className='github'>
-            <i className='fa fa-github'></i>
-            repo
-          </a>
-        </div>
-
-        <div className='project-title highlight'>
-          {this.props.title}
-        </div>
-                
-        <div className='project-info'>
-          {this.props.description}
-        </div>
-
-      </div>
-    )
-  }
-}
-
-
-class ProjectContainer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return(
-      <div className='projects'>
-
-        <div className='title'>
-          Projects
-        </div>
-
-        <div className='projects-display'>
-          <Project heroku='https://ytshuffle.herokuapp.com/'
-                   repo='https://github.com/kianga722/ytshuffle'
-                   image={ytshuffle}
-                   title='ytshuffle'
-                   description='Built primarily using Rails, this project shuffles and plays Youtube playlists'
-          />
-          <Project heroku='https://cnotify.herokuapp.com/'
-                   repo='https://github.com/kianga722/cnotify'
-                   image={cnotify}
-                   title='cnotify'
-                   description='Made using Rails and JavaScript, this project helps find events personalized to my tastes'
-          />
-          <Project heroku='https://kianga722.github.io/yourinfo/'
-                   repo='https://github.com/kianga722/yourinfo'
-                   image={userInfo}
-                   title='yourinfo'
-                   description='This project aims to experiment with React and to display info that can be obtained from a user simply visiting a website'
-          />
-        </div>
-
-      </div>
-    )
-  }
-}
-
+import Navbar from './components/Navbar';
+import Profile from './components/Profile';
+import ProjectContainer from './components/ProjectContainer';
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -188,14 +13,13 @@ class Portfolio extends React.Component {
       secretCode: [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
       pressed: []
     }
-    this.handleKeyUp = this.handleKeyUp.bind(this);
   }
 
   componentDidMount() {
     window.addEventListener('keyup', this.handleKeyUp)
   }
 
-  handleKeyUp(e) {
+  handleKeyUp = (e) => {
     let pressedNew = this.state.pressed.concat(e.keyCode);
     pressedNew.splice(0, pressedNew.length - this.state.secretCode.length);
 
@@ -211,7 +35,7 @@ class Portfolio extends React.Component {
   render() {
     return(
       <div className='page-wrap'>
-        <Nav />
+        <Navbar />
         <div className='content'>
           <Profile />
           <ProjectContainer />
