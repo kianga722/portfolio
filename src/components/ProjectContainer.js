@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Project from './Project';
 import layoutscroll from '../images/layoutscroll.png'
 import motivator from '../images/motivator.png'
+import nsong from '../images/nsong.png'
 import ytshuffle from '../images/ytshuffle.png'
 import cnotify from '../images/cnotify.jpg'
 import statusw from '../images/statusw.png'
@@ -26,6 +27,13 @@ class ProjectContainer extends Component {
                 image={motivator}
                 title='motivator'
                 description='Uses React, Express, and MongoDB to display random motivational quotes and videos'
+              />
+              <Project
+                site='https://nsong.herokuapp.com'
+                repo='https://github.com/kianga722/nsong'
+                image={nsong}
+                title='nsong'
+                description='Displays recent songs from popular Youtube channels using React, Express, and the Youtube API'
               />
               <Project
                 site='https://ytshuffle.herokuapp.com/'
