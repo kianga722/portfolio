@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Project from './Project';
+import workout531 from '../images/531workout.png'
 import layoutscroll from '../images/layoutscroll.png'
 import motivator from '../images/motivator.png'
 import nsong from '../images/nsong.png'
@@ -15,11 +16,18 @@ class ProjectContainer extends Component {
             <div className='title'>Projects</div>
             <div className='projects-display'>
               <Project
-                site='https://kianga722.github.io/layoutscroll'
-                repo='https://github.com/kianga722/layoutscroll'
-                image={layoutscroll}
-                title='layoutscroll'
-                description='Infinitely scrolling layout generator using HTML, CSS, and JavaScript'
+                site='https://workout531.herokuapp.com/'
+                repo='https://github.com/kianga722/531workout'
+                image={workout531}
+                title='531workout'
+                description='Generates workouts for the 5/3/1 lifting program using React, Node, and MongoDB'
+              />
+              <Project
+                site='https://nsong.herokuapp.com'
+                repo='https://github.com/kianga722/nsong'
+                image={nsong}
+                title='nsong'
+                description='Displays recent songs from popular Youtube channels using React, Express, and the Youtube API'
               />
               <Project
                 site='https://dudejustdoit.herokuapp.com'
@@ -29,11 +37,11 @@ class ProjectContainer extends Component {
                 description='Uses React, Express, and MongoDB to display random motivational quotes and videos'
               />
               <Project
-                site='https://nsong.herokuapp.com'
-                repo='https://github.com/kianga722/nsong'
-                image={nsong}
-                title='nsong'
-                description='Displays recent songs from popular Youtube channels using React, Express, and the Youtube API'
+                site='https://kianga722.github.io/layoutscroll'
+                repo='https://github.com/kianga722/layoutscroll'
+                image={layoutscroll}
+                title='layoutscroll'
+                description='Infinitely scrolling layout generator using HTML, CSS, and JavaScript'
               />
               <Project
                 site='https://ytshuffle.herokuapp.com/'
