@@ -20,7 +20,7 @@ class ProjectContainer extends Component {
                 repo='https://github.com/kianga722/531workout'
                 image={workout531}
                 title='531workout'
-                description='Generates workouts for the 5/3/1 lifting program using React, Node, and MongoDB'
+                description='Generates workouts for the 5/3/1 lifting program using React, Node, and MongoDB '
               />
               <Project
                 site='https://nsong.herokuapp.com'
