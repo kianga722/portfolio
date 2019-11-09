@@ -1,42 +1,46 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Project extends Component {
-  render() {
-    return(
-      <div className='project'>
+const Project = ({
+  site,
+  repo,
+  image,
+  title,
+  description
+}) => {
+  return (
+    <article className='project'>
 
-        <a href={this.props.site} target='_blank' rel='noopener noreferrer' className='live'>
-          <img src={this.props.image} alt='project screenshot' />
-          <div className='live-overlay'>
+      <a href={site} target='_blank' rel='noopener noreferrer' className='live'>
+        <img src={image} alt='project screenshot' />
+        <div className='live-overlay'>
+        </div>
+        <div className='view-wrapper'>
+          <div className='viewSite'>
+            View Site
           </div>
-          <div className='view-wrapper'>
-            <div className='viewSite'>
-              View Site
-            </div>
-          </div>
+        </div>
+      </a>
+
+      <div className='project-links'>
+        <a href={site} target='_blank' rel='noopener noreferrer' className='view'>
+          view
         </a>
-
-        <div className='project-links'>
-          <a href={this.props.site} target='_blank' rel='noopener noreferrer' className='view'>
-            view
-          </a>
-          <a href={this.props.repo}target='_blank' rel='noopener noreferrer' className='github'>
-            <i className='fa fa-github'></i>
-            repo
-          </a>
-        </div>
-
-        <div className='project-title highlight'>
-          {this.props.title}
-        </div>
-                
-        <div className='project-info'>
-          {this.props.description}
-        </div>
-
+        <a href={repo}target='_blank' rel='noopener noreferrer' className='github'>
+          <i className='fa fa-github'></i>
+          repo
+        </a>
       </div>
-    )
-  }
+
+      <h1 className='project-title highlight'>
+        {title}
+      </h1>
+              
+      <p className='project-info'>
+        {description}
+      </p>
+
+    </article>
+  )
 }
 
 export default Project;

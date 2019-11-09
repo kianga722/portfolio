@@ -1,40 +1,43 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Navbar extends Component {
-  render() {
-    return (
-      <div className='nav-wrapper'>
-        <nav className='nav-fixed'>
+const Navbar = () => {
+  return (
+    <header className='nav-wrapper'>
+      <nav className='nav-fixed'>
 
-          <div className='email-address highlight'>
-            kianga722@gmail.com
+        <div className='email-address highlight'>
+          kianga722@gmail.com
+        </div>
+
+        <a href='https://kianga722.github.io' className='brand'>
+          <div>
+            Andrew Kiang
           </div>
+        </a>
 
-          <a href='https://kianga722.github.io' className='brand'>
-            <div>
-              Andrew Kiang
-            </div>
+        <div className='email-wrapper'>
+          <a
+            href='mailto:kianga722@gmail.com' className='email'
+          >
+            <i className='fa fa-envelope-square'></i>
           </a>
+          <span className='highlight'>
+            kianga722@gmail.com
+          </span>
+        </div>
+    
+        <a
+          href='https://github.com/kianga722' target='_blank'
+          rel='noopener noreferrer'
+          className='github'
+        >
+          <i className='fa fa-github'></i>
+          GitHub
+        </a>
 
-          <ul className='contact-links'>
-            <li>
-              <a href='mailto:kianga722@gmail.com' className='email'>
-                <i className='fa fa-envelope-square'></i>
-              </a>
-              <span className='highlight'>kianga722@gmail.com</span>
-            </li>
-            <li>
-              <a href='https://github.com/kianga722' target='_blank' rel='noopener noreferrer' className='github'>
-                <i className='fa fa-github'></i>
-                GitHub
-              </a>
-            </li>  
-          </ul>
-
-        </nav>
-      </div>
-    )
-  }
+      </nav>
+    </header>
+  )
 }
 
 export default Navbar;
