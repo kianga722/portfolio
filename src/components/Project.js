@@ -1,4 +1,5 @@
 import React from 'react';
+import Tilt from 'react-tilt';
 
 const Project = ({
   site,
@@ -8,7 +9,10 @@ const Project = ({
   description
 }) => {
   return (
-    <article className='project'>
+    <Tilt options={{scale: 1, reverse: true}}>
+    <article
+      className='project'
+    >
 
       <a href={site} target='_blank' rel='noopener noreferrer' className='live'>
         <img src={image} alt='project screenshot' />
@@ -39,7 +43,8 @@ const Project = ({
         {description}
       </p>
 
-    </article>
+      </article>
+      </Tilt>
   )
 }
 

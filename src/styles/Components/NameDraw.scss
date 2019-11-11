@@ -1,0 +1,39 @@
+svg {
+  max-width: 26rem;
+  width: 100%;
+  height: auto;
+  fill: black;
+  stroke: black;
+  stroke-width: 4;
+
+  cursor: pointer;
+  
+  tspan > tspan {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: -1500;
+    
+    @for $i from 1 through 15 {
+      &:nth-of-type(#{$i}) {
+        animation: draw 300ms #{$i * 150}ms forwards;
+      }
+    }
+  }
+
+  &:hover {
+    text-shadow: 0 0 3px #ffcfcf;
+  }
+}
+
+@keyframes draw {
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+
+
+@media (max-width: 750px) {
+  svg {
+    max-width: 17rem;
+  }
+}

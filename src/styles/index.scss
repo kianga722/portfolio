@@ -1,0 +1,43 @@
+@import '_elements.scss';
+
+@import './Components/Nav.scss';
+@import './Components/Profile.scss';
+@import './Components/AvatarFlip.scss';
+@import './Components/NameDraw.scss';
+@import './Components/ProjectContainer.scss';
+@import './Components/Project.scss';
+
+body {
+  background-color: black;
+}
+
+.page-wrap {
+  position: absolute;
+  width: 100vw;
+
+  background: url('../images/nyc.jpg');
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  --x: 0;
+  --y: 0;
+  background-position: calc(50% - var(--x)) calc(50% - var(--y));
+}
+
+/*
+Content
+*/
+
+.content {
+  max-width: 1000px;
+  padding-top: 69px;
+  margin: 0 auto 69px;
+}
+
+@media (max-width: 750px) {
+  .page-wrap {
+    background-size: unset;
+    background-position: 75%;
+  }
+}

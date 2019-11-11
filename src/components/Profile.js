@@ -1,16 +1,26 @@
 import React from 'react';
-import profilePic from '../images/profPic.png';
+
+import AvatarFlip from './AvatarFlip';
+import NameDraw from './NameDraw';
 
 const Profile = () => {
+  const handleDrawRestart = () => {
+    const draw = document.querySelector('#AndrewKiang tspan');
+    const eleClone = draw.cloneNode(true);
+    draw.parentNode.replaceChild(eleClone, draw)
+  }
+
   return (
     <header className='profile'>
 
-      <img src={profilePic} alt='profile pic' />
+      <AvatarFlip
+        handleDrawRestart={handleDrawRestart}
+      />
 
       <h1 className='profile-name'>
-        <div className='highlight'>
-          Andrew Kiang
-        </div>
+        <NameDraw
+          handleDrawRestart={handleDrawRestart}
+        />
       </h1>
 
       <div className='profile-location'>

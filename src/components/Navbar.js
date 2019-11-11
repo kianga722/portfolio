@@ -9,7 +9,7 @@ const Navbar = () => {
           kianga722@gmail.com
         </div>
 
-        <a href='https://kianga722.github.io' className='brand'>
+        <a href='/' className='brand'>
           <div>
             Andrew Kiang
           </div>
