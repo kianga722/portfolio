@@ -7,6 +7,10 @@
 @import './Components/ProjectContainer.scss';
 @import './Components/Project.scss';
 
+
+/*
+Background Mousemove effect
+*/
 body {
   background-color: black;
 }
@@ -25,11 +29,9 @@ body {
   background-position: calc(50% - var(--x)) calc(50% - var(--y));
 }
 
-
 /*
 Content
 */
-
 .content {
   max-width: 1000px;
   padding-top: 69px;

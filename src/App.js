@@ -4,9 +4,7 @@ import Profile from './components/Profile';
 import ProjectContainer from './components/ProjectContainer';
 
 function App() {
-
-  
-
+  // Background Mousemove effect
   useEffect(() => {
     const el = document.querySelector(".page-wrap");
 
