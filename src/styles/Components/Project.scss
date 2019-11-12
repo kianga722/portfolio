@@ -126,4 +126,13 @@
       display: none;
     }
   }
+
+  .is-visible {
+    transform: translateX(-3000px);
+    animation: come-in 0.3s ease forwards;
+  }
+
+  @keyframes come-in {
+    to { transform: translateX(0); }
+  }
 }

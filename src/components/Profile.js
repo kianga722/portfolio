@@ -13,9 +13,7 @@ const Profile = () => {
   return (
     <header className='profile'>
 
-      <AvatarFlip
-        handleDrawRestart={handleDrawRestart}
-      />
+      <AvatarFlip />
 
       <h1 className='profile-name'>
         <NameDraw
