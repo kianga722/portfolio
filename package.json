@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://kianga722.github.io",
   "dependencies": {
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.0.1",
